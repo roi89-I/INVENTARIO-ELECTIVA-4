@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="author" content="Jesus Morgado">
+        <meta name="description" content="CRUD Control de Inventario">
+        <meta name="keywords" content="HTML, CSS, JS, Mongo DB">
+
+        <title>J-Commerce</title>
+
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+        <link rel="shortcut icon" href="img/coins_7238552.png" type="image/x-icon">
+
+
+        <!-- <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script> -->
+
+        <script type="text/javascript" src="server_db.js"></script>
+        
+    </head>
+
+    <body>
+        <h1>Control de Inventario</h1>
+        <form id="productForm">
+            <input type="text" id="productName" name="productName" maxlength="20" placeholder="Nombre del Producto" required>
+            <input type="text" id="productDescription" name="productDescription" maxlength="20" placeholder="Descripción" required>
+            <input type="number" min="1" id="productQuantity" placeholder="Cantidad" required>
+            <button type="submit" class="success">Añadir Producto</button>
+        </form>
+
+        <h2>Buscar Productos</h2>
+        <input type="text" id="searchInput" maxlength="20" placeholder="Buscar por nombre">
+        <button onclick="searchProduct()" class="info">Buscar</button>
+
+        <h2>Búsqueda Avanzada</h2>
+        <input type="number" id="minQuantity" min="1" placeholder="Cantidad mínima">
+        <input type="number" id="maxQuantity" min="1" max="200" placeholder="Cantidad máxima">
+        <button onclick="advancedSearch()" class="info">Buscar</button>
+
+        <h2>Lista de Productos</h2>
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Cantidad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            <!-- Los productos se agregarán aquí, una vez completado el registro -->
+            </tbody>
+        </table>
+
+        <script type="text/javascript" src="index.js"></script>
+
+    </body>
+</html>
