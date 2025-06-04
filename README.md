@@ -8,7 +8,7 @@
 
 - Html
 
-- C++
+- CSS
 
 - JavaScript
 
